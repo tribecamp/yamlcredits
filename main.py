@@ -7,39 +7,50 @@
 import sys
 import yaml
 
+def formatContribution(contribution):
+  """
+  Formats a contribution.
+  """
+  return "  - {0}\n".format(contribution)
+
 def formatCredits(entry):
   """
-  Parses an entry from the credits array.
+  Formats an entry in the list of credits.
   """
-  contributions = entry["contributions"]
+  return "\n".join([
+    "- **{0}**".format(entry["name"]),
+    "".join(map(formatContribution, entry["contributions"]))
+  ])
 
-  return """
-- **{name}**
-{contributions}
-  """.format(
-    name=entry["name"],
-    contributions=''.join(map(lambda c: "  - " + c + "\n", contributions))
-  ).strip()
+def generateOutput(config):
+  """
+  Generates the final output.
+  """
+  return "\n".join([
+    "# Credits",
+    config["subtitle"].strip(),
+    "",
+    "".join(map(formatCredits, config["credits"]))
+  ]).strip()
 
-filename = sys.argv[1]
+def main():
+  """
+  Entrypoint.
+  """
+  # The filename
+  filename = sys.argv[1]
 
-# Load the config
-file = open(filename, "r")
-config = yaml.load(file, Loader=yaml.FullLoader)
+  # Load the config
+  file = open(filename, "r")
+  config = yaml.load(file, Loader=yaml.FullLoader)
 
-output = """
+  output = generateOutput(config)
 
-# Credits
-{subtitle}
+  # Print the output to stdout
+  print(output)
 
-{credits}
+  # Clean up
+  file.close()
 
-""".format(
-  subtitle=config["subtitle"].strip(),
-  credits='\n'.join(map(formatCredits, config["credits"]))
-).strip()
-
-print(output)
-
-# Clean up
-file.close()
+if __name__ == '__main__':
+  main()
