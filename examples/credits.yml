@@ -2,6 +2,14 @@ subtitle: |
   Lorem ipsum sit amet
 credits:
   - name: 'John Smith'
+    socials:
+      github: jsmith
     contributions:
       - Added feature X
       - Fixed bug Y
+
+  - name: 'Sarah Johnson'
+    socials:
+      linkedin: sjohnson
+    contributions:
+      - Refactored the codebase
