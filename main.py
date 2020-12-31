@@ -11,10 +11,18 @@ filename = sys.argv[1]
 
 # Load the config
 file = open(filename, "r")
-config = yaml.load(file,Loader=yaml.FullLoader)
+config = yaml.load(file, Loader=yaml.FullLoader)
 
-# TODO: remove
-print(config)
+output = """
+
+# Credits
+{subtitle}
+
+""".format(
+  subtitle=config["subtitle"].strip()
+).strip()
+
+print(output)
 
 # Clean up
 file.close()
