@@ -3,3 +3,4 @@ examples/CREDITS.md
 dist
 *.egg-info
 build
+__pycache__
