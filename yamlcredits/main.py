@@ -6,7 +6,7 @@
 
 import sys
 import yaml
-from format import formatCredits
+from format import formatCredits, formatSubtitle
 
 def generateOutput(config):
   """
@@ -14,7 +14,7 @@ def generateOutput(config):
   """
   return "\n".join([
     "# Credits",
-    config["subtitle"].strip(),
+    formatSubtitle(config["subtitle"]),
     "",
     "".join(map(formatCredits, config["credits"]))
   ]).strip()

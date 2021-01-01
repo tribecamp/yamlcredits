@@ -12,3 +12,9 @@ def formatCredits(entry):
     "- **{0}**".format(entry["name"]),
     "".join(map(formatContribution, entry["contributions"]))
   ])
+
+def formatSubtitle(subtitle):
+  """
+  Formats a subtitle.
+  """
+  return subtitle.strip()
