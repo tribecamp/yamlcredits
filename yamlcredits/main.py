@@ -16,7 +16,7 @@ def generateOutput(config):
     "# Credits",
     formatSubtitle(config["subtitle"]),
     "",
-    "".join(map(formatCredits, config["credits"]))
+    formatCredits(config["credits"])
   ]).strip()
 
 def main():

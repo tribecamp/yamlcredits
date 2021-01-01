@@ -4,7 +4,7 @@ def formatContribution(contribution):
   """
   return "  - {0}\n".format(contribution)
 
-def formatCredits(entry):
+def formatCreditsEntry(entry):
   """
   Formats an entry in the list of credits.
   """
@@ -12,6 +12,14 @@ def formatCredits(entry):
     "- **{0}**".format(entry["name"]),
     "".join(map(formatContribution, entry["contributions"]))
   ])
+
+def formatCredits(credits):
+  """
+  Formats a list of credits.
+  """
+  return "".join(
+    map(formatCreditsEntry, credits)
+  )
 
 def formatSubtitle(subtitle):
   """
