@@ -8,7 +8,7 @@
       "name": "Debug YAMLCredits",
       "type": "python",
       "request": "launch",
-      "program": "main.py",
+      "program": "yamlcredits/main.py",
       "args": ["examples/credits.yml"],
       "console": "integratedTerminal"
     },
@@ -16,7 +16,7 @@
       "name": "Compile example credits",
       "type": "python",
       "request": "launch",
-      "program": "main.py",
+      "program": "yamlcredits/main.py",
       "args": ["examples/credits.yml", ">", "examples/CREDITS.md"]
     }
   ]
