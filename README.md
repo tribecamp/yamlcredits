@@ -26,7 +26,7 @@ pip install -r requirements.txt
 yamlcredits path/to/config.yml
 ```
 
-### Output to a file:
+### Output to a file
 
 ```bash
 yamlcredits path/to/config.yml > CREDITS.md
