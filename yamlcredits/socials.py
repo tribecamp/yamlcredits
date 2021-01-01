@@ -5,23 +5,27 @@
 # License: MIT
 #
 
-def getImageLink(raw_link, caption):
+# [![Foo](http://www.google.com.au/images/nav_logo7.png)](http://google.com.au/)
+def getImageLink(url, img_url, caption):
   """
-  Converts a raw link to a Markdown image link.
+  Converts a URL to a Markdown image link.
   """
-  return "[{caption}]({link})".format(
+  return "[![{caption}]({img_url} =16x16)]({url})".format(
     caption=caption,
-    link=raw_link
+    img_url=img_url,
+    url=url
   )
 
 def github(username):
   return getImageLink(
     "https://github.com/{0}".format(username),
+    "https://raw.githubusercontent.com/rdimascio/icons/master/icons/github.svg",
     "GitHub"
   )
 
 def linkedin(username):
   return getImageLink(
     "https://www.linkedin.com/in/{0}".format(username),
+    "https://raw.githubusercontent.com/rdimascio/icons/master/icons/linkedin.svg",
     "LinkedIn"
   )
