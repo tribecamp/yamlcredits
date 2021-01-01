@@ -5,18 +5,34 @@
 # License: MIT
 #
 
+from socials import github, linkedin
+
 def formatContribution(contribution):
   """
   Formats a contribution.
   """
   return "  - {0}\n".format(contribution)
 
+def formatSocials(socials):
+  """
+  Formats socials.
+  """
+  social_links = []
+  if "github" in socials:
+    social_links.append(github(socials["github"]))
+  if "linkedin" in socials:
+    social_links.append(linkedin(socials["linkedin"]))
+  return " ".join(social_links)
+
 def formatCreditsEntry(entry):
   """
   Formats an entry in the list of credits.
   """
   return "\n".join([
-    "- **{0}**".format(entry["name"]),
+    "- **{0}** {1}".format(
+      entry["name"],
+      formatSocials(entry["socials"])
+    ),
     "".join(map(formatContribution, entry["contributions"]))
   ])
 
