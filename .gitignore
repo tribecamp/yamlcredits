@@ -1,2 +1,5 @@
 examples/CREDITS.md
 .vscode/.ropeproject/objectdb
+dist
+*.egg-info
+build
