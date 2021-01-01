@@ -2,6 +2,7 @@
 # (c) Tribecamp 2020
 # Authored by:
 # Kees van Voorthuizen <kees.van.voorthuizen@gmail.com>
+# License: MIT
 #
 
 import sys
