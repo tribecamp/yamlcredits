@@ -1,3 +1,9 @@
+#
+# (c) Tribecamp 2020
+# Authored by:
+# Kees van Voorthuizen <kees.van.voorthuizen@gmail.com>
+#
+
 def formatContribution(contribution):
   """
   Formats a contribution.
