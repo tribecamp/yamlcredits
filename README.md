@@ -36,6 +36,8 @@ yamlcredits path/to/config.yml > CREDITS.md
 
 Kees van Voorthuizen [(@keesvv)](https://github.com/keesvv) – original author
 
+Sting Alleman [(@stingalleman)](https://github.com/stingalleman) – added additional usage example
+
 ## License
 
 [MIT](./LICENSE)
