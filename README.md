@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Usage
 ```bash
-yamlcredits path-to-config.yml
+yamlcredits path-to-config.yml > CREDITS.md
 ```
 
 ## Credits
