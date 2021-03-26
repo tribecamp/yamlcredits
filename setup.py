@@ -18,6 +18,6 @@ setup(
   packages=["yamlcredits"],
   scripts=["bin/yamlcredits"],
   install_requires=[
-    "PyYAML==5.3.1"
+    "PyYAML==5.4"
   ]
 )
